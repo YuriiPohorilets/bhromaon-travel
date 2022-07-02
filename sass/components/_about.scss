@@ -1,0 +1,48 @@
+.about {
+    padding: 118px;
+
+    background-image: url('../../images/about/about-bg.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.about__container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.about__wrapper {
+    margin-right: 110px;
+    flex-basis: 55%;
+}
+
+.title {
+    @extend %title;
+
+    margin-bottom: 50px;
+}
+
+.about__text {
+    margin-bottom: 45px;
+}
+
+.btn {
+    @extend %btn;
+}
+
+.about__list {
+    @extend %list;
+    flex-basis: 45%;
+}
+
+.about__item {
+    &:not(:last-child) {
+        margin-bottom: 10px;
+    }
+}
+
+.about__img--right {
+    margin-left: auto;
+}

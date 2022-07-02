@@ -1,0 +1,159 @@
+// Header
+.header {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 28px 0;
+
+    background-color: getColor(accent);
+}
+
+.header__container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    @extend %link;
+
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 1.08;
+    letter-spacing: 2.4px;
+    text-transform: uppercase;
+    color: getColor(primary);
+}
+
+.nav__list {
+    @extend %list;
+
+    display: flex;
+}
+
+.nav__item {
+    margin-right: 35px;
+
+    font-family: getFont(secondary);
+    font-size: 14px;
+    line-height: 1.86;
+    text-transform: uppercase;
+    color: getColor(primary);
+
+    &:last-child {
+        margin-right: 0;
+    }
+}
+
+.nav__link {
+    @extend %link;
+    padding: 20px 0;
+}
+
+// Hero
+.hero {
+    height: 100vh;
+    padding-top: 264px;
+    padding-bottom: 215px;
+
+    background-image: url('../../images/hero-bg.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.hero__container {
+    text-align: center;
+}
+
+.hero__title {
+    margin-bottom: 11px;
+
+    font-family: 'Josefin Sans';
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 0.54;
+    letter-spacing: 4.8px;
+    text-transform: uppercase;
+}
+
+.hero__subtitle {
+    margin-bottom: 48px;
+
+    font-size: 22px;
+    line-height: 1.18;
+    letter-spacing: 6.82px;
+}
+
+.search {
+    position: relative;
+
+    margin-bottom: 107px;
+    margin-left: auto;
+    margin-right: auto;
+
+    width: 653px;
+}
+
+.search__input {
+    width: 653px;
+    height: 64px;
+
+    background-color: getColor(active-white);
+    border: none;
+}
+
+.search__label {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+
+    transform: translate(-100%, -50%);
+
+    font-size: 14px;
+    line-height: 1.86;
+    letter-spacing: 2.8px;
+    color: getColor(copy);
+}
+
+.search__btn {
+    position: absolute;
+    top: 50%;
+    right: 2px;
+
+    transform: translateY(-50%);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 17px 20px;
+
+    font-family: getFont(secondary);
+    font-size: 14px;
+    line-height: 1.86;
+    letter-spacing: 1.4px;
+    text-transform: uppercase;
+    color: getColor(primary);
+
+    background-color: getColor(accent);
+    border: none;
+
+    cursor: pointer;
+}
+
+.search__icon {
+    margin-left: 15px;
+    width: 22px;
+    height: 22px;
+    fill: currentColor;
+}
+
+.hero__scroll {
+    @extend %link;
+    font-size: 14px;
+    line-height: 1.86;
+    letter-spacing: 2.8px;
+
+    color: getCOlor(primary);
+}

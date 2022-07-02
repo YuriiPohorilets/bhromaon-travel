@@ -41,6 +41,8 @@
     text-transform: uppercase;
     color: getColor(secondary);
 
+    overflow: hidden;
+
     &:last-child {
         margin-right: 0;
     }
@@ -48,7 +50,37 @@
 
 .nav__link {
     @extend %link;
+
     padding: 20px 0;
+
+    transition: transform getProperty(time) getProperty(cubic),
+        color getProperty(time) getProperty(cubic);
+
+    &::after {
+        content: '';
+
+        display: block;
+        width: 100%;
+        height: 2px;
+
+
+        background-color: currentColor;
+
+        transform: translateX(-101%);
+        transition: transform getProperty(time) getProperty(cubic),
+            color getProperty(time) getProperty(cubic);
+    }
+
+    &:hover,
+    &:focus {
+        color: getColor(active-hover);
+    }
+
+    &:hover::after,
+    &:focus::after {
+        color: getColor(active-hover);
+        transform: translateX(0);
+    }
 }
 
 // Hero
@@ -97,14 +129,6 @@
     width: 653px;
 }
 
-.search__input {
-    width: 653px;
-    height: 64px;
-
-    background-color: getColor(active-white);
-    border: none;
-}
-
 .search__label {
     position: absolute;
     top: 50%;
@@ -116,7 +140,35 @@
     line-height: 1.86;
     letter-spacing: 2.8px;
     color: getColor(copy);
+
+    cursor: text;
+
+    transition: transform getProperty(time) getProperty(cubic),
+        color getProperty(time) getProperty(cubic) 200ms;
 }
+
+.search__input {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 45px;
+    padding-right: 180px;
+
+    width: 653px;
+    height: 64px;
+
+    font-size: 18px;
+    color: getColor(copy);
+
+    background-color: getColor(active-white);
+    border: none;
+
+    &:not(:placeholder-shown)+.search__label,
+    &:focus-within+.search__label {
+        color: getColor(secondary);
+        transform: translate(-100%, 150%);
+    }
+}
+
 
 .search__btn {
     position: absolute;
@@ -142,6 +194,13 @@
     border: none;
 
     cursor: pointer;
+
+    transition: background-color getProperty(time) getProperty(cubic);
+
+    &:hover,
+    &:focus {
+        background-color: getColor(active-accent);
+    }
 }
 
 .search__icon {

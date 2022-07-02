@@ -23,7 +23,7 @@
     line-height: 1.08;
     letter-spacing: 2.4px;
     text-transform: uppercase;
-    color: getColor(primary);
+    color: getColor(secondary);
 }
 
 .nav__list {
@@ -39,7 +39,7 @@
     font-size: 14px;
     line-height: 1.86;
     text-transform: uppercase;
-    color: getColor(primary);
+    color: getColor(secondary);
 
     &:last-child {
         margin-right: 0;
@@ -75,6 +75,7 @@
     line-height: 0.54;
     letter-spacing: 4.8px;
     text-transform: uppercase;
+    color: getColor(secondary);
 }
 
 .hero__subtitle {
@@ -83,6 +84,7 @@
     font-size: 22px;
     line-height: 1.18;
     letter-spacing: 6.82px;
+    color: getColor(secondary);
 }
 
 .search {
@@ -134,7 +136,7 @@
     line-height: 1.86;
     letter-spacing: 1.4px;
     text-transform: uppercase;
-    color: getColor(primary);
+    color: getColor(secondary);
 
     background-color: getColor(accent);
     border: none;
@@ -155,5 +157,5 @@
     line-height: 1.86;
     letter-spacing: 2.8px;
 
-    color: getCOlor(primary);
+    color: getCOlor(secondary);
 }

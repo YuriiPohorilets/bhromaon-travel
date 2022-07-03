@@ -5,6 +5,7 @@ body {
     line-height: 1.62;
     letter-spacing: 1.6px;
     color: getColor(primary);
+
 }
 
 h1,
@@ -29,6 +30,14 @@ img {
     max-width: 1140px;
     margin: 0 auto;
     padding: 0 15px;
+
+    @include bpoint(tablet) {
+        width: getSize(tablet);
+    }
+
+    @include bpoint(desktop) {
+        width: getSize(desktop);
+    }
 }
 
 .hidden {
@@ -78,11 +87,18 @@ img {
     color: getColor(secondary);
 
     background-color: getColor(accent);
-    background-image: linear-gradient(45deg, getColor(active-accent) 40%, getColor(accent) 40%);
     border: none;
 
     cursor: pointer;
 
+    transition: color getProperty(time) getProperty(cubic),
+        box-shadow getProperty(time) getProperty(cubic),
+        background-color getProperty(time) getProperty(cubic);
 
-    transition: transform getProperty(time) getProperty(cubic);
+    &:hover,
+    &:focus {
+        color: getColor(active-hover);
+        background-color: getColor(active-accent);
+        box-shadow: getShadow(btn);
+    }
 }

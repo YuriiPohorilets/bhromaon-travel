@@ -24,25 +24,32 @@
     <!-- Styles -->
     <link rel="stylesheet" href="./css/main.min.css">
 
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="./images/favicon.ico">
+
+    <!-- SmoothScroll -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+
 </head>
 
 <body>
-    <header class="header">
+    <header class="header" id="myHeader">
         <div class="header__container container">
-            <a class="logo" href="#">Bhromaon</a>
+            <a class="logo" href="#hero-section">Bhromaon</a>
             <nav class="nav">
                 <ul class="nav__list">
                     <li class="nav__item">
-                        <a class="nav__link" href="#">Who We Are</a>
+                        <a class="nav__link" href="#about-section">Who We Are</a>
                     </li>
                     <li class="nav__item">
-                        <a class="nav__link" href="#">What We Do</a>
+                        <a class="nav__link" href="#advantage-section">What We Do</a>
                     </li>
                     <li class="nav__item">
-                        <a class="nav__link" href="#">Travel With Us</a>
+                        <a class="nav__link" href="#gallery-section">Travel With Us</a>
                     </li>
                     <li class="nav__item">
-                        <a class="nav__link" href="#">Contact Us</a>
+                        <a class="nav__link" href="#review-section">Contact Us</a>
                     </li>
                 </ul>
             </nav>
@@ -66,7 +73,7 @@
                         </svg>
                     </button>
                 </form>
-                <a class="hero__scroll" href="#">Scroll Down</a>
+                <a class="hero__scroll" href="#myHeader">Scroll Down</a>
             </div>
         </section>
 
@@ -77,7 +84,7 @@
                     <h2 class="title">Why Choose Us</h2>
                     <p class="about__text">Tion and dislike men who are so beguiled and demoralized by desire by the
                         charms of pleasure of the moment, so blinded
-                        by desire, that they cannot foresee. </br></br> Ddislike men who are so beguiled and demoralized
+                        by desire, that they cannot foresee.<br><br>Ddislike men who are so beguiled and demoralized
                         by
                         the charms of pleasure of the
                         moment, so blinded by desire, that.
@@ -97,7 +104,7 @@
             </div>
         </section>
 
-        <section class="advantage">
+        <section class="advantage" id="advantage-section">
             <div class="advantage__container container">
                 <h2 class="title hidden">What We Do</h2>
 
@@ -124,7 +131,7 @@
             </div>
         </section>
 
-        <section class="gallery">
+        <section class="gallery" id="gallery-section">
             <h2 class="title hidden">Travel With Us</h2>
 
             <div class="gallery__wrapper">
@@ -156,7 +163,7 @@
             </div>
         </section>
 
-        <section class="review">
+        <section class="review" id="review-section">
             <div class="review__container container">
                 <h2 class="review__title title">What Our Tourist Say</h2>
 
@@ -313,6 +320,13 @@
             },
         });
     </script>
+
+
+    <!-- Smooth -->
+    <script src="./js/smooth.js"></script>
+
+    <!-- Header -->
+    <script src="./js/header.js"></script>
 </body>
 
 </html>

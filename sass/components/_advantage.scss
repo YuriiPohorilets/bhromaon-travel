@@ -13,6 +13,7 @@
 }
 
 .advantage__item {
+    position: relative;
     margin-right: 158px;
 
     font-family: getFont(secondary);
@@ -23,9 +24,25 @@
     &:last-child {
         margin-right: 0;
     }
+
+    &:not(:last-child)::after {
+        content: '';
+        position: absolute;
+        top: 40%;
+        right: 0;
+
+        transform: translateX(100%);
+
+        display: block;
+        width: 158px;
+        height: 1px;
+
+        background-color: getColor(active-white);
+    }
 }
 
 .advantage__icon {
+    position: relative;
     margin-bottom: 35px;
 
     width: 100px;

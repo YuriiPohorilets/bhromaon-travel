@@ -1,12 +1,19 @@
 // Header
 .header {
     position: absolute;
-    bottom: 0;
+    top: 100%;
     left: 0;
     width: 100%;
     padding: 28px 0;
 
     background-color: getColor(accent);
+}
+
+.sticky {
+    position: fixed;
+    z-index: 999;
+    top: 0;
+    width: 100%
 }
 
 .header__container {
@@ -24,6 +31,13 @@
     letter-spacing: 2.4px;
     text-transform: uppercase;
     color: getColor(secondary);
+
+    transition: text-shadow getProperty(time) getProperty(cubic);
+
+    &:hover,
+    &:focus {
+        text-shadow: getShadow(btn);
+    }
 }
 
 .nav__list {
@@ -157,7 +171,7 @@
 .search {
     position: relative;
 
-    margin-bottom: 107px;
+    margin-bottom: 100px;
     margin-left: auto;
     margin-right: auto;
 
@@ -236,6 +250,11 @@
     &:focus {
         background-color: getColor(active-accent);
     }
+
+    &:hover .search__icon,
+    &:focus .search__icon {
+        transform: scale(1.2);
+    }
 }
 
 .search__icon {
@@ -243,13 +262,59 @@
     width: 22px;
     height: 22px;
     fill: currentColor;
+
+    transition: transform getProperty(time) getProperty(cubic);
 }
 
 .hero__scroll {
     @extend %link;
+    position: relative;
+
+    padding: 10px;
     font-size: 14px;
     line-height: 1.86;
     letter-spacing: 2.8px;
 
-    color: getCOlor(secondary);
+    color: getColor(secondary);
+
+    transition: color getProperty(time) getProperty(cubic);
+
+    &:hover,
+    &:focus {
+        color: getColor(accent);
+    }
+
+    &::before {
+        content: '';
+        position: absolute;
+        bottom: -45%;
+        left: 50%;
+
+        transform: rotate(-45deg) translateY(-95%);
+        transform-origin: top left;
+
+        display: inline-block;
+
+        width: 15px;
+        height: 1.5px;
+
+        background-color: currentColor;
+    }
+
+    &::after {
+        content: '';
+        position: absolute;
+        bottom: -45%;
+        right: 50%;
+
+        transform: rotate(45deg) translateY(-95%);
+        transform-origin: top right;
+
+        display: inline-block;
+
+        width: 15px;
+        height: 1.5px;
+
+        background-color: currentColor;
+    }
 }

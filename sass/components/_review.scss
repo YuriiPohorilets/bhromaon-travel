@@ -1,9 +1,36 @@
+// Swiper
+.swiper {
+    width: 100%;
+    height: 100%;
+}
+
+.swiper-slide {
+    background: getColor(background-card);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.swiper-slide img {
+    display: block;
+    width: 445px;
+    height: 284px;
+    object-fit: cover;
+}
+
+.swiper-scrollbar-drag {
+    background-color: getColor(accent);
+}
+
+// End Swiper
+
 .review {
     padding-top: 130px;
     padding-bottom: 200px;
 
 
-    background-image: url('../../images/review/review-bg.jpg');
+    background-image: url('../images/review/review-bg.jpg');
     background-repeat: no-repeat;
     background-size: cover;
 }

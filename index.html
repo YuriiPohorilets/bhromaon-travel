@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1" />
     <title>Bhromaon - Safe Travel Anywhere</title>
 
     <!-- Normalize -->
@@ -18,8 +18,12 @@
     <link href="https://fonts.googleapis.com/css2?family=Aleo&family=Josefin+Sans:wght@400;700&display=swap"
         rel="stylesheet">
 
+    <!-- Link Swiper's CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+
     <!-- Styles -->
     <link rel="stylesheet" href="./css/main.min.css">
+
 </head>
 
 <body>
@@ -156,27 +160,76 @@
             <div class="review__container container">
                 <h2 class="review__title title">What Our Tourist Say</h2>
 
-                <div class="review__wrapper">
-                    <img class="review__img" src="./images/review/review-1.jpg" alt="" width="445" height="284">
+                <div class="swiper mySwiper">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <div class="review__wrapper">
+                                <img class="review__img" src="./images/review/review-1.jpg" alt="" width="445"
+                                    height="284">
+                                <article class="review__comment comment">
+                                    <h3 class="comment__name">Sam Sumon</h3>
+                                    <p class="comment__text">
+                                        <svg class="bracket">
+                                            <use href="./images/icon-sprite.svg#icon-quotes"></use>
+                                        </svg>
+                                        But I must explain to you how all this mistaken idea of account to
+                                        denouncinpleasure and praising pain But I must explain to you how all this
+                                        mistaken idea of account to nai denouncing pleasure and praising pain was
+                                        account born and I account will give you a complete account of the system
+                                        was account born and I account will give you a nai the complete account of
+                                        the system
+                                    </p>
+                                </article>
+                            </div>
+                        </div>
 
-                    <article class="review__comment comment">
-                        <h3 class="comment__name">Sam Sumon</h3>
-                        <p class="comment__text">
-                            <svg class="bracket">
-                                <use href="./images/icon-sprite.svg#icon-quotes"></use>
-                            </svg>
-                            But I must explain to you how all this
-                            mistaken idea of account to
-                            denouncinpleasure and praising pain But I must
-                            explain to you how all this mistaken idea of account to nai denouncing pleasure and
-                            praising
-                            pain was account born and I
-                            account will give you a complete account of the system was account born and I account
-                            will
-                            give you a nai the complete
-                            account of the system
-                        </p>
-                    </article>
+                        <div class="swiper-slide">
+                            <div class="swiper-slide">
+                                <div class="review__wrapper">
+                                    <img class="review__img" src="./images/review/review-2.jpg" alt="" width="445"
+                                        height="284">
+                                    <article class="review__comment comment">
+                                        <h3 class="comment__name"> Alen Smith</h3>
+                                        <p class="comment__text">
+                                            <svg class="bracket">
+                                                <use href="./images/icon-sprite.svg#icon-quotes"></use>
+                                            </svg>
+                                            But I must explain to you how all this mistaken idea of account to
+                                            denouncinpleasure and praising pain But I must explain to you how all this
+                                            mistaken idea of account to nai denouncing pleasure and praising pain was
+                                            account born and I account will give you a complete account of the system
+                                            was account born and I account will give you a nai the complete account of
+                                            the system
+                                        </p>
+                                    </article>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="swiper-slide">
+                            <div class="swiper-slide">
+                                <div class="review__wrapper">
+                                    <img class="review__img" src="./images/review/review-3.jpg" alt="" width="445"
+                                        height="284">
+                                    <article class="review__comment comment">
+                                        <h3 class="comment__name">Lindsay Lorem</h3>
+                                        <p class="comment__text">
+                                            <svg class="bracket">
+                                                <use href="./images/icon-sprite.svg#icon-quotes"></use>
+                                            </svg>
+                                            But I must explain to you how all this mistaken idea of account to
+                                            denouncinpleasure and praising pain But I must explain to you how all this
+                                            mistaken idea of account to nai denouncing pleasure and praising pain was
+                                            account born and I account will give you a complete account of the system
+                                            was account born and I account will give you a nai the complete account of
+                                            the system
+                                        </p>
+                                    </article>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-scrollbar"></div>
                 </div>
             </div>
         </section>
@@ -226,6 +279,40 @@
             </div>
         </footer>
     </main>
+
+    <!-- Swiper JS -->
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+    <!-- Initialize Swiper -->
+    <script>
+        var swiper = new Swiper(".mySwiper", {
+            speed: 1000,
+            loop: true,
+            scrollbar: {
+                el: ".swiper-scrollbar",
+                hide: true,
+            },
+            autoplay: {
+                delay: 3500,
+                disableOnInteraction: false,
+            },
+            mousewheel: {
+                invert: true,
+            },
+
+            effect: 'creative',
+            creativeEffect: {
+                prev: {
+                    // will set `translateZ(-400px)` on previous slides
+                    translate: [-500, 0, -500],
+                },
+                next: {
+                    // will set `translateX(100%)` on next slides
+                    translate: ['100%', 0, 0],
+                },
+            },
+        });
+    </script>
 </body>
 
 </html>

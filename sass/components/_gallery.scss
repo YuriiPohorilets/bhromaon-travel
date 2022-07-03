@@ -6,11 +6,11 @@
     background-size: cover;
 
     &:nth-of-type(1) {
-        background-image: url('../../images/gallery/gallery-bg-1.jpg');
+        background-image: url('../images/gallery/gallery-bg-1.jpg');
     }
 
     &:nth-of-type(2) {
-        background-image: url('../../images/gallery/gallery-bg-2.jpg');
+        background-image: url('../images/gallery/gallery-bg-2.jpg');
     }
 }
 

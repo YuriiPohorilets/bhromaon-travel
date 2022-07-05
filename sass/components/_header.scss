@@ -68,7 +68,8 @@
     padding: 20px 0;
 
     transition: transform getProperty(time) getProperty(cubic),
-        color getProperty(time) getProperty(cubic);
+        color getProperty(time) getProperty(cubic),
+        text-shadow getProperty(time) getProperty(cubic);
 
     &::after {
         content: '';
@@ -77,22 +78,20 @@
         width: 100%;
         height: 2px;
 
-
         background-color: currentColor;
-
         transform: translateX(-101%);
         transition: transform getProperty(time) getProperty(cubic),
-            color getProperty(time) getProperty(cubic);
+            background-color getProperty(time) getProperty(cubic);
     }
 
     &:hover,
     &:focus {
         color: getColor(active-hover);
+        text-shadow: getShadow(btn);
     }
 
     &:hover::after,
     &:focus::after {
-        color: getColor(active-hover);
         transform: translateX(0);
     }
 }
@@ -282,6 +281,7 @@
     &:hover,
     &:focus {
         color: getColor(accent);
+        text-shadow: getShadow(btn);
     }
 
     &::before {

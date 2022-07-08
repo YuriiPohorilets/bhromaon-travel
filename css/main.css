@@ -419,7 +419,7 @@ img {
 .about {
   padding: 118px;
   background-color: rgba(35, 35, 35, 0.9);
-  background-image: url("../../images/about/about-bg.jpg");
+  background-image: url("../images/about/about-bg.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;

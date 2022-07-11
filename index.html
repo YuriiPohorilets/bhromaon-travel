@@ -1,293 +1,453 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1" />
-    <meta name="description"
-        content="A service where you can choose a place to travel and order a safe and guaranteed trip anywhere">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1"
+    />
+    <meta
+      name="description"
+      content="A service where you can choose a place to travel and order a safe and guaranteed trip anywhere"
+    />
 
     <title>Bhromaon - Safe Travel Anywhere</title>
 
     <!-- Normalize -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.1.0/modern-normalize.min.css"
-        integrity="sha512-wpPYUAdjBVSE4KJnH1VR1HeZfpl1ub8YT/NKx4PuQ5NmX2tKuGu6U/JRp5y+Y8XG2tV+wKQpNHVUX03MfMFn9Q=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.1.0/modern-normalize.min.css"
+      integrity="sha512-wpPYUAdjBVSE4KJnH1VR1HeZfpl1ub8YT/NKx4PuQ5NmX2tKuGu6U/JRp5y+Y8XG2tV+wKQpNHVUX03MfMFn9Q=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
 
     <!-- Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Aleo&family=Josefin+Sans:wght@400;700&display=swap"
-        rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Aleo&family=Josefin+Sans:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
 
     <!-- Link Swiper's CSS -->
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
 
     <!-- Styles -->
-    <link rel="stylesheet" href="./css/main.min.css">
+    <link rel="stylesheet" href="./css/main.min.css" />
 
     <!-- Favicon -->
-    <link rel="icon" type="image/x-icon" href="./images/favicon.ico">
+    <link rel="icon" type="image/x-icon" href="./images/favicon.ico" />
 
     <!-- SmoothScroll -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  </head>
 
-
-</head>
-
-<body>
+  <body>
     <header class="header" id="myHeader">
-        <div class="header__container container">
-            <a class="logo" href="#hero-section">Bhromaon</a>
-            <nav class="nav">
-                <ul class="nav__list">
-                    <li class="nav__item">
-                        <a class="nav__link" href="#about-section">Who We Are</a>
-                    </li>
-                    <li class="nav__item">
-                        <a class="nav__link" href="#advantage-section">What We Do</a>
-                    </li>
-                    <li class="nav__item">
-                        <a class="nav__link" href="#gallery-section">Travel With Us</a>
-                    </li>
-                    <li class="nav__item">
-                        <a class="nav__link" href="#review-section">Contact Us</a>
-                    </li>
-                </ul>
-            </nav>
-        </div>
+      <div class="header__container container">
+        <a class="logo" href="#hero-section">Bhromaon</a>
+        <nav class="nav">
+          <ul class="nav__list">
+            <li class="nav__item">
+              <a class="nav__link" href="#about-section">Who We Are</a>
+            </li>
+            <li class="nav__item">
+              <a class="nav__link" href="#advantage-section">What We Do</a>
+            </li>
+            <li class="nav__item">
+              <a class="nav__link" href="#gallery-section">Travel With Us</a>
+            </li>
+            <li class="nav__item">
+              <a class="nav__link" href="#review-section">Contact Us</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
     </header>
 
     <main>
-        <section class="hero" id="hero-section">
-            <div class="hero__container container">
-                <h1 class="hero__title">Bhromaon</h1>
-                <p class="hero__subtitle">Safe Travel Anywhere</p>
+      <section class="hero" id="hero-section">
+        <div class="hero__container container">
+          <h1 class="hero__title">Bhromaon</h1>
+          <p class="hero__subtitle">Safe Travel Anywhere</p>
 
-                <form class="search">
-                    <input class="search__input" type="text" name="search" id="site-search" placeholder=" ">
-                    <label class="search__label" for="site-search">
-                        Search Your Travel Destination
+          <form class="search">
+            <input
+              class="search__input"
+              type="text"
+              name="search"
+              id="site-search"
+              placeholder=" "
+            />
+            <label class="search__label" for="site-search"> Search Your Travel Destination </label>
+            <button class="search__btn" type="submit">
+              Search
+              <svg class="search__icon">
+                <use href="./images/icon-sprite.svg#icon-search"></use>
+              </svg>
+            </button>
+          </form>
+          <a class="hero__scroll" href="#myHeader">Scroll Down</a>
+        </div>
+      </section>
+
+      <section class="about" id="about-section">
+        <div class="about__container container">
+          <div class="about__wrapper">
+            <h2 class="title">Why Choose Us</h2>
+            <p class="about__text">
+              Tion and dislike men who are so beguiled and demoralized by desire by the charms of
+              pleasure of the moment, so blinded by desire, that they cannot foresee.<br /><br />Ddislike
+              men who are so beguiled and demoralized by the charms of pleasure of the moment, so
+              blinded by desire, that.
+            </p>
+            <button class="btn js-open-modal" data-modal="1">Explore Places</button>
+
+            <!-- Modal -->
+            <div class="about__modal modal" data-modal="1">
+              <!--   Svg иконка для закрытия окна  -->
+              <svg
+                class="modal__cross js-modal-close"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  d="M23.954 21.03l-9.184-9.095 9.092-9.174-2.832-2.807-9.09 9.179-9.176-9.088-2.81 2.81 9.186 9.105-9.095 9.184 2.81 2.81 9.112-9.192 9.18 9.1z"
+                />
+              </svg>
+              <form class="explore">
+                <h3 class="explore__title title">Where to?</h3>
+
+                <div class="form-group" role="group" aria-labelledby="contact-details-head">
+                  <div class="input__wrapper">
+                    <select
+                      class="explore__input"
+                      type="text"
+                      name="user-destinaton"
+                      id="user-destinaton"
+                    >
+                      <option value="china">China</option>
+                      <option value="finland">Finland</option>
+                      <option value="france">France</option>
+                      <option value="spain">Spain</option>
+                      <option value="ukraine" selected>Ukraine</option>
+                    </select>
+                    <label class="explore__label" for="user-destinaton">Country</label>
+                  </div>
+
+                  <div class="input__wrapper">
+                    <select
+                      class="explore__input"
+                      type="text"
+                      name="user-destinaton"
+                      id="user-destinaton"
+                    >
+                      <optgroup label="China">
+                        <option value="hong-kong">Hong Kong</option>
+                        <option value="beijing">Beijing</option>
+                        <option value="shanghai">Shanghai</option>
+                      </optgroup>
+                      <optgroup label="Finland">
+                        <option value="akaa">Akaa</option>
+                        <option value="alavus">Alavus</option>
+                        <option value="forssa">Forssa</option>
+                        <option value="helsinki">Helsinki</option>
+                        <option value="suonenjoki">Suonenjoki</option>
+                      </optgroup>
+                      <optgroup label="France">
+                        <option value="paris">Paris</option>
+                        <option value="marseille">Marseille</option>
+                      </optgroup>
+                      <optgroup label="Spain">
+                        <option value="madrid">Madrid</option>
+                        <option value="barcelona">Barcelona</option>
+                        <option value="valencia">SpValenciaain</option>
+                      </optgroup>
+                      <optgroup label="Ukraine">
+                        <option value="spain" selected>Kyiv</option>
+                        <option value="spain">Lviv</option>
+                        <option value="spain">Odessa</option>
+                      </optgroup>
+                    </select>
+                    <label class="explore__label" for="user-destinaton">City</label>
+                  </div>
+
+                  <div class="input__wrapper">
+                    <input
+                      class="explore__input"
+                      type="date"
+                      min="2022-01-01"
+                      max="2023-01-01"
+                      name="user-date-in"
+                      id="user-date-in"
+                    />
+                    <label class="explore__label" for="user-date-in">Check In</label>
+                  </div>
+
+                  <div class="input__wrapper">
+                    <input
+                      class="explore__input"
+                      type="date"
+                      min="2022-01-01"
+                      max="2023-01-01"
+                      name="user-date-out"
+                      id="user-date-out"
+                    />
+                    <label class="explore__label" for="user-date-out">Check Out</label>
+                  </div>
+                  <div class="input__wrapper">
+                    <input
+                      class="explore__input"
+                      type="text"
+                      name="user-num-people"
+                      id="user-num-people"
+                    />
+                    <label class="explore__label" for="user-num-people"> For... </label>
+                  </div>
+
+                  <div class="input__wrapper">
+                    <label class="explore__label" for="user-work-check">
+                      I'm traveling for work
                     </label>
-                    <button class="search__btn" type="submit">Search
-                        <svg class="search__icon">
-                            <use href="./images/icon-sprite.svg#icon-search"></use>
-                        </svg>
-                    </button>
-                </form>
-                <a class="hero__scroll" href="#myHeader">Scroll Down</a>
+
+                    <input
+                      class="explore__check"
+                      type="checkbox"
+                      name="user-work-check"
+                      id="user-work-check"
+                    />
+                  </div>
+
+                  <button class="btn btn--modal" type="button">Find your places</button>
+                </div>
+              </form>
             </div>
-        </section>
+            <div class="overlay js-overlay-modal"></div>
+          </div>
 
-        <section class="about" id="about-section">
-            <div class="about__container container">
+          <ul class="about__list">
+            <li class="about__item">
+              <img
+                class="about__img"
+                src="./images/about/about-1.jpg"
+                alt=""
+                width="350"
+                height="220"
+              />
+            </li>
+            <li class="about__item">
+              <img
+                class="about__img about__img--right"
+                src="./images/about/about-2.jpg"
+                alt=""
+                width="350"
+                height="220"
+              />
+            </li>
+          </ul>
+        </div>
+      </section>
 
-                <div class="about__wrapper">
-                    <h2 class="title">Why Choose Us</h2>
-                    <p class="about__text">Tion and dislike men who are so beguiled and demoralized by desire by the
-                        charms of pleasure of the moment, so blinded
-                        by desire, that they cannot foresee.<br><br>Ddislike men who are so beguiled and demoralized
-                        by
-                        the charms of pleasure of the
-                        moment, so blinded by desire, that.
+      <section class="advantage" id="advantage-section">
+        <div class="advantage__container container">
+          <h2 class="title hidden">What We Do</h2>
+
+          <ul class="advantage__list">
+            <li class="advantage__item">
+              <svg class="advantage__icon">
+                <use href="./images/icon-sprite.svg#icon-map"></use>
+              </svg>
+              <p class="advantage__text">Search Places</p>
+            </li>
+            <li class="advantage__item">
+              <svg class="advantage__icon">
+                <use href="./images/icon-sprite.svg#icon-check"></use>
+              </svg>
+              <p class="advantage__text">Select Places</p>
+            </li>
+            <li class="advantage__item">
+              <svg class="advantage__icon">
+                <use href="./images/icon-sprite.svg#icon-airplane"></use>
+              </svg>
+              <p class="advantage__text">Book & Enjoy</p>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="gallery" id="gallery-section">
+        <h2 class="title hidden">Travel With Us</h2>
+
+        <div class="gallery__wrapper">
+          <div class="gallery__container container">
+            <div class="gallery__item">
+              <h3 class="gallery__title">Spain</h3>
+              <p class="gallery__subtitle">Grand Spain Madrid</p>
+              <p class="gallery__text">
+                But I must explain to you how all this mistaken idea of account to denouncing
+                pleasure and praising pain was account born and I account will give you a complete
+                account of the system
+              </p>
+              <button class="btn">Book Now</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="gallery__wrapper">
+          <div class="gallery__container container">
+            <div class="gallery__item gallery__item--to-right">
+              <h3 class="gallery__title">Spain</h3>
+              <p class="gallery__subtitle">Grand Spain Madrid</p>
+              <p class="gallery__text">
+                But I must explain to you how all this mistaken idea of account to denouncing
+                pleasure and praising pain was account born and I account will give you a complete
+                account of the system
+              </p>
+              <button class="btn">Book Now</button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="review" id="review-section">
+        <div class="review__container container">
+          <h2 class="review__title title">What Our Tourist Say</h2>
+
+          <div class="swiper mySwiper">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <div class="review__wrapper">
+                  <img
+                    class="review__img"
+                    src="./images/review/review-1.jpg"
+                    alt=""
+                    width="445"
+                    height="284"
+                  />
+                  <article class="review__comment comment">
+                    <h3 class="comment__name">Sam Sumon</h3>
+                    <p class="comment__text">
+                      <svg class="bracket">
+                        <use href="./images/icon-sprite.svg#icon-quotes"></use>
+                      </svg>
+                      But I must explain to you how all this mistaken idea of account to
+                      denouncinpleasure and praising pain But I must explain to you how all this
+                      mistaken idea of account to nai denouncing pleasure and praising pain was
+                      account born and I account will give you a complete account of the system was
+                      account born and I account will give you a nai the complete account of the
+                      system
                     </p>
-                    <button class="btn">Explore Places</button>
+                  </article>
                 </div>
+              </div>
 
-                <ul class="about__list">
-                    <li class="about__item">
-                        <img class="about__img" src="./images/about/about-1.jpg" alt="" width="350" height="220">
-                    </li>
-                    <li class="about__item">
-                        <img class="about__img about__img--right" src="./images/about/about-2.jpg" alt="" width="350"
-                            height="220">
-                    </li>
-                </ul>
-            </div>
-        </section>
-
-        <section class="advantage" id="advantage-section">
-            <div class="advantage__container container">
-                <h2 class="title hidden">What We Do</h2>
-
-                <ul class="advantage__list">
-                    <li class="advantage__item">
-                        <svg class="advantage__icon">
-                            <use href="./images/icon-sprite.svg#icon-map"></use>
+              <div class="swiper-slide">
+                <div class="swiper-slide">
+                  <div class="review__wrapper">
+                    <img
+                      class="review__img"
+                      src="./images/review/review-2.jpg"
+                      alt=""
+                      width="445"
+                      height="284"
+                    />
+                    <article class="review__comment comment">
+                      <h3 class="comment__name">Alen Smith</h3>
+                      <p class="comment__text">
+                        <svg class="bracket">
+                          <use href="./images/icon-sprite.svg#icon-quotes"></use>
                         </svg>
-                        <p class="advantage__text">Search Places</p>
-                    </li>
-                    <li class="advantage__item">
-                        <svg class="advantage__icon">
-                            <use href="./images/icon-sprite.svg#icon-check"></use>
+                        But I must explain to you how all this mistaken idea of account to
+                        denouncinpleasure and praising pain But I must explain to you how all this
+                        mistaken idea of account to nai denouncing pleasure and praising pain was
+                        account born and I account will give you a complete account of the system
+                        was account born and I account will give you a nai the complete account of
+                        the system
+                      </p>
+                    </article>
+                  </div>
+                </div>
+              </div>
+
+              <div class="swiper-slide">
+                <div class="swiper-slide">
+                  <div class="review__wrapper">
+                    <img
+                      class="review__img"
+                      src="./images/review/review-3.jpg"
+                      alt=""
+                      width="445"
+                      height="284"
+                    />
+                    <article class="review__comment comment">
+                      <h3 class="comment__name">Lindsay Lorem</h3>
+                      <p class="comment__text">
+                        <svg class="bracket">
+                          <use href="./images/icon-sprite.svg#icon-quotes"></use>
                         </svg>
-                        <p class="advantage__text">Select Places</p>
-                    </li>
-                    <li class="advantage__item">
-                        <svg class="advantage__icon">
-                            <use href="./images/icon-sprite.svg#icon-airplane"></use>
-                        </svg>
-                        <p class="advantage__text">Book & Enjoy</p>
-                    </li>
-                </ul>
-            </div>
-        </section>
-
-        <section class="gallery" id="gallery-section">
-            <h2 class="title hidden">Travel With Us</h2>
-
-            <div class="gallery__wrapper">
-                <div class="gallery__container container">
-                    <div class="gallery__item">
-                        <h3 class="gallery__title">Spain</h3>
-                        <p class="gallery__subtitle">Grand Spain Madrid</p>
-                        <p class="gallery__text">But I must explain to you how all this mistaken idea of account to
-                            denouncing pleasure and praising pain was account
-                            born and I account will give you a complete account of the system
-                        </p>
-                        <button class="btn">Book Now</button>
-                    </div>
+                        But I must explain to you how all this mistaken idea of account to
+                        denouncinpleasure and praising pain But I must explain to you how all this
+                        mistaken idea of account to nai denouncing pleasure and praising pain was
+                        account born and I account will give you a complete account of the system
+                        was account born and I account will give you a nai the complete account of
+                        the system
+                      </p>
+                    </article>
+                  </div>
                 </div>
+              </div>
             </div>
+            <div class="swiper-scrollbar"></div>
+          </div>
+        </div>
+      </section>
 
-            <div class="gallery__wrapper">
-                <div class="gallery__container container">
-                    <div class="gallery__item gallery__item--to-right">
-                        <h3 class="gallery__title">Spain</h3>
-                        <p class="gallery__subtitle">Grand Spain Madrid</p>
-                        <p class="gallery__text">But I must explain to you how all this mistaken idea of account to
-                            denouncing pleasure and praising pain was account
-                            born and I account will give you a complete account of the system
-                        </p>
-                        <button class="btn">Book Now</button>
-                    </div>
-                </div>
-            </div>
-        </section>
+      <footer class="footer">
+        <div class="footer__container container">
+          <p class="footer__title">Bhromaon</p>
+          <p class="footer__subtitle">Safe Travel Anywhere</p>
 
-        <section class="review" id="review-section">
-            <div class="review__container container">
-                <h2 class="review__title title">What Our Tourist Say</h2>
-
-                <div class="swiper mySwiper">
-                    <div class="swiper-wrapper">
-                        <div class="swiper-slide">
-                            <div class="review__wrapper">
-                                <img class="review__img" src="./images/review/review-1.jpg" alt="" width="445"
-                                    height="284">
-                                <article class="review__comment comment">
-                                    <h3 class="comment__name">Sam Sumon</h3>
-                                    <p class="comment__text">
-                                        <svg class="bracket">
-                                            <use href="./images/icon-sprite.svg#icon-quotes"></use>
-                                        </svg>
-                                        But I must explain to you how all this mistaken idea of account to
-                                        denouncinpleasure and praising pain But I must explain to you how all this
-                                        mistaken idea of account to nai denouncing pleasure and praising pain was
-                                        account born and I account will give you a complete account of the system
-                                        was account born and I account will give you a nai the complete account of
-                                        the system
-                                    </p>
-                                </article>
-                            </div>
-                        </div>
-
-                        <div class="swiper-slide">
-                            <div class="swiper-slide">
-                                <div class="review__wrapper">
-                                    <img class="review__img" src="./images/review/review-2.jpg" alt="" width="445"
-                                        height="284">
-                                    <article class="review__comment comment">
-                                        <h3 class="comment__name"> Alen Smith</h3>
-                                        <p class="comment__text">
-                                            <svg class="bracket">
-                                                <use href="./images/icon-sprite.svg#icon-quotes"></use>
-                                            </svg>
-                                            But I must explain to you how all this mistaken idea of account to
-                                            denouncinpleasure and praising pain But I must explain to you how all this
-                                            mistaken idea of account to nai denouncing pleasure and praising pain was
-                                            account born and I account will give you a complete account of the system
-                                            was account born and I account will give you a nai the complete account of
-                                            the system
-                                        </p>
-                                    </article>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="swiper-slide">
-                            <div class="swiper-slide">
-                                <div class="review__wrapper">
-                                    <img class="review__img" src="./images/review/review-3.jpg" alt="" width="445"
-                                        height="284">
-                                    <article class="review__comment comment">
-                                        <h3 class="comment__name">Lindsay Lorem</h3>
-                                        <p class="comment__text">
-                                            <svg class="bracket">
-                                                <use href="./images/icon-sprite.svg#icon-quotes"></use>
-                                            </svg>
-                                            But I must explain to you how all this mistaken idea of account to
-                                            denouncinpleasure and praising pain But I must explain to you how all this
-                                            mistaken idea of account to nai denouncing pleasure and praising pain was
-                                            account born and I account will give you a complete account of the system
-                                            was account born and I account will give you a nai the complete account of
-                                            the system
-                                        </p>
-                                    </article>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="swiper-scrollbar"></div>
-                </div>
-            </div>
-        </section>
-
-        <footer class="footer">
-            <div class="footer__container container">
-                <p class="footer__title">Bhromaon</p>
-                <p class="footer__subtitle">Safe Travel Anywhere</p>
-
-                <ul class="social">
-                    <li class="social__item">
-                        <a class="social__link" href="#">
-                            <svg class="social__icon">
-                                <use href="./images/icon-sprite.svg#icon-facebook"></use>
-                            </svg>
-                        </a>
-                    </li>
-                    <li class="social__item">
-                        <a class="social__link" href="#">
-                            <svg class="social__icon">
-                                <use href="./images/icon-sprite.svg#icon-twitter"></use>
-                            </svg>
-                        </a>
-                    </li>
-                    <li class="social__item">
-                        <a class="social__link" href="#">
-                            <svg class="social__icon">
-                                <use href="./images/icon-sprite.svg#icon-linkedin"></use>
-                            </svg>
-                        </a>
-                    </li>
-                    <li class="social__item">
-                        <a class="social__link" href="#">
-                            <svg class="social__icon">
-                                <use href="./images/icon-sprite.svg#icon-youtube"></use>
-                            </svg>
-                        </a>
-                    </li>
-                    <li class="social__item">
-                        <a class="social__link" href="#">
-                            <svg class="social__icon">
-                                <use href="./images/icon-sprite.svg#icon-pinterest"></use>
-                            </svg>
-                        </a>
-                    </li>
-                </ul>
-            </div>
-        </footer>
+          <ul class="social">
+            <li class="social__item">
+              <a class="social__link" href="#">
+                <svg class="social__icon">
+                  <use href="./images/icon-sprite.svg#icon-facebook"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="social__item">
+              <a class="social__link" href="#">
+                <svg class="social__icon">
+                  <use href="./images/icon-sprite.svg#icon-twitter"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="social__item">
+              <a class="social__link" href="#">
+                <svg class="social__icon">
+                  <use href="./images/icon-sprite.svg#icon-linkedin"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="social__item">
+              <a class="social__link" href="#">
+                <svg class="social__icon">
+                  <use href="./images/icon-sprite.svg#icon-youtube"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="social__item">
+              <a class="social__link" href="#">
+                <svg class="social__icon">
+                  <use href="./images/icon-sprite.svg#icon-pinterest"></use>
+                </svg>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </footer>
     </main>
 
     <!-- Swiper JS -->
@@ -295,41 +455,42 @@
 
     <!-- Initialize Swiper -->
     <script>
-        var swiper = new Swiper(".mySwiper", {
-            speed: 1000,
-            loop: true,
-            scrollbar: {
-                el: ".swiper-scrollbar",
-                hide: true,
-            },
-            autoplay: {
-                delay: 3500,
-                disableOnInteraction: false,
-            },
-            mousewheel: {
-                invert: true,
-            },
+      var swiper = new Swiper('.mySwiper', {
+        speed: 1000,
+        loop: true,
+        scrollbar: {
+          el: '.swiper-scrollbar',
+          hide: true,
+        },
+        autoplay: {
+          delay: 3500,
+          disableOnInteraction: false,
+        },
+        mousewheel: {
+          invert: true,
+        },
 
-            effect: 'creative',
-            creativeEffect: {
-                prev: {
-                    // will set `translateZ(-400px)` on previous slides
-                    translate: [-500, 0, -500],
-                },
-                next: {
-                    // will set `translateX(100%)` on next slides
-                    translate: ['100%', 0, 0],
-                },
-            },
-        });
+        effect: 'creative',
+        creativeEffect: {
+          prev: {
+            // will set `translateZ(-400px)` on previous slides
+            translate: [-500, 0, -500],
+          },
+          next: {
+            // will set `translateX(100%)` on next slides
+            translate: ['100%', 0, 0],
+          },
+        },
+      });
     </script>
 
+    <!-- Modal -->
+    <script src="./js/modal.js"></script>
 
     <!-- Smooth -->
     <script src="./js/smooth.js"></script>
 
     <!-- Header -->
     <script src="./js/header.js"></script>
-</body>
-
+  </body>
 </html>

@@ -1,11 +1,10 @@
 body {
-    font-family: getFont(primary);
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 1.62;
-    letter-spacing: 1.6px;
-    color: getColor(primary);
-
+  font-family: getFont(primary);
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.62;
+  letter-spacing: 1.6px;
+  color: getColor(primary);
 }
 
 h1,
@@ -16,89 +15,93 @@ h5,
 h6,
 p,
 ul {
-    margin: 0px;
-    padding: 0px;
+  margin: 0px;
+  padding: 0px;
 }
 
 img {
-    display: block;
-    max-width: 100%;
-    height: auto;
+  display: block;
+  max-width: 100%;
+  height: auto;
 }
 
 .container {
-    max-width: 1140px;
-    margin: 0 auto;
-    padding: 0 15px;
+  max-width: 1140px;
+  margin: 0 auto;
+  padding: 0 15px;
 
-    @include bpoint(tablet) {
-        width: getSize(tablet);
-    }
+  @include bpoint(tablet) {
+    width: getSize(tablet);
+  }
 
-    @include bpoint(desktop) {
-        width: getSize(desktop);
-    }
+  @include bpoint(desktop) {
+    width: getSize(desktop);
+  }
+}
+
+.section {
+  padding: 115px;
 }
 
 .hidden {
-    position: absolute;
+  position: absolute;
 
-    margin: -1px;
-    padding: 0;
-    width: 1px;
-    height: 1px;
+  margin: -1px;
+  padding: 0;
+  width: 1px;
+  height: 1px;
 
-    border: 0;
+  border: 0;
 
-    white-space: nowrap;
-    clip-path: inset(100%);
-    clip: rect(0 0 0 0);
-    overflow: hidden;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
 }
 
 // Placeholders
 %list {
-    list-style: none;
+  list-style: none;
 }
 
 %link {
-    text-decoration: none;
-    color: currentColor;
+  text-decoration: none;
+  color: currentColor;
 }
 
 %title {
-    font-family: getFont(secondary);
-    font-weight: 400;
-    font-size: 36px;
-    line-height: 0.72;
-    color: getColor(secondary);
+  font-family: getFont(secondary);
+  font-weight: 400;
+  font-size: 36px;
+  line-height: 0.72;
+  color: getColor(secondary);
 }
 
 %btn {
-    padding: 16px 20px;
-    width: 228px;
-    height: 63px;
+  padding: 16px 20px;
+  width: 228px;
+  height: 63px;
 
-    font-family: getFont(secondary);
-    font-size: 16px;
-    line-height: 1.62;
-    letter-spacing: 1.2px;
-    text-transform: uppercase;
-    color: getColor(secondary);
+  font-family: getFont(secondary);
+  font-size: 16px;
+  line-height: 1.62;
+  letter-spacing: 1.2px;
+  text-transform: uppercase;
+  color: getColor(secondary);
 
-    background-color: getColor(accent);
-    border: none;
+  background-color: getColor(accent);
+  border: none;
 
-    cursor: pointer;
+  cursor: pointer;
 
-    transition: color getProperty(time) getProperty(cubic),
-        box-shadow getProperty(time) getProperty(cubic),
-        background-color getProperty(time) getProperty(cubic);
+  transition: color getProperty(time) getProperty(cubic),
+    box-shadow getProperty(time) getProperty(cubic),
+    background-color getProperty(time) getProperty(cubic);
 
-    &:hover,
-    &:focus {
-        color: getColor(active-hover);
-        background-color: getColor(active-accent);
-        box-shadow: getShadow(btn);
-    }
+  &:hover,
+  &:focus {
+    color: getColor(active-hover);
+    background-color: getColor(active-accent);
+    box-shadow: getShadow(btn);
+  }
 }

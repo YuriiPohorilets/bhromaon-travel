@@ -35,20 +35,26 @@
   text-transform: uppercase;
   color: getColor(secondary);
 
-  transition: text-shadow getProperty(time) getProperty(cubic);
+  text-shadow: getShadow(btn);
+  transition: color getProperty(time) getProperty(cubic);
 
   &:hover,
   &:focus {
-    text-shadow: getShadow(btn);
+    color: getColor(active-hover);
   }
 }
 
 // Burger
 .burger {
   position: relative;
+  z-index: 2;
 
   width: 30px;
   height: 30px;
+
+  overflow: hidden;
+
+  cursor: pointer;
 
   &::before {
     content: '';
@@ -63,6 +69,9 @@
     height: 2px;
 
     background-color: #fff;
+    box-shadow: getShadow(btn);
+
+    transition: transform getProperty(time) getProperty(cubic);
   }
 
   &::after {
@@ -78,6 +87,9 @@
     height: 2px;
 
     background-color: #fff;
+    box-shadow: getShadow(btn);
+
+    transition: transform getProperty(time) getProperty(cubic);
   }
 
   @include bpoint(desktop) {
@@ -96,24 +108,87 @@
   height: 2px;
 
   background-color: #fff;
+  box-shadow: getShadow(btn);
+
+  transition: transform getProperty(time) getProperty(cubic);
+}
+
+.burger.is-open {
+  &::before {
+    transform: translate(-50%, 400%) rotate(-45deg);
+  }
+  &::after {
+    transform: translate(-50%, -400%) rotate(45deg);
+  }
+
+  & .burger__item {
+    transform: translate(100%, -50%) rotate(360deg);
+  }
+}
+
+.burger.is-open ~ .nav {
+  transform: translateX(0);
+  opacity: 1;
+  visibility: visible;
 }
 
 .nav {
-  display: none;
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 1;
+
+  padding: 90px 70px;
+  width: 100vw;
+  height: 100vh;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+
+  text-align: center;
+
+  background-color: getColor(accent);
+
+  transform: translateX(-100%);
+  opacity: 0;
+  visibility: hidden;
+
+  transition: transform getProperty(time) getProperty(cubic),
+    opacity getProperty(time) getProperty(cubic), visibility getProperty(time) getProperty(cubic);
+
+  @include bpoint(tablet) {
+    width: 60vw;
+  }
 
   @include bpoint(desktop) {
-    display: block;
+    position: static;
+
+    padding: 0;
+    height: 100%;
+    display: inline;
+
+    transform: translateX(0);
+    opacity: 1;
+    visibility: visible;
+    background-color: transparent;
   }
 }
 
 .nav__list {
   @extend %list;
 
-  display: flex;
+  // display: flex;
+
+  @include bpoint(desktop) {
+    display: flex;
+    justify-content: flex-end;
+  }
 }
 
 .nav__item {
-  margin-right: 35px;
+  margin-bottom: 35px;
 
   font-family: getFont(secondary);
   font-size: 14px;
@@ -124,7 +199,16 @@
   overflow: hidden;
 
   &:last-child {
-    margin-right: 0;
+    margin-bottom: 0;
+  }
+
+  @include bpoint(desktop) {
+    margin-bottom: 0;
+    margin-right: 35px;
+
+    &:last-child {
+      margin-right: 0;
+    }
   }
 }
 
@@ -158,6 +242,12 @@
   &:hover::after,
   &:focus::after {
     transform: translateX(0);
+  }
+}
+
+.social.social--menu {
+  @include bpoint(desktop) {
+    display: none;
   }
 }
 

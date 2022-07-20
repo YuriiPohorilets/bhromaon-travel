@@ -48,23 +48,61 @@
     <header class="header" id="myHeader">
       <div class="header__container container">
         <a class="logo" href="#hero-section">Bhromaon</a>
-        <div class="burger">
+        <div class="burger js-menu">
           <span class="burger__item"></span>
         </div>
 
         <nav class="nav">
           <ul class="nav__list">
-            <li class="nav__item">
-              <a class="nav__link" href="#about-section">Who We Are</a>
+            <li class="nav__item js-menu-close">
+              <a class="nav__link js-menu-close" href="#about-section">Who We Are</a>
             </li>
-            <li class="nav__item">
-              <a class="nav__link" href="#advantage-section">What We Do</a>
+            <li class="nav__item js-menu-close">
+              <a class="nav__link js-menu-close" href="#advantage-section">What We Do</a>
             </li>
-            <li class="nav__item">
-              <a class="nav__link" href="#gallery-section">Travel With Us</a>
+            <li class="nav__item js-menu-close">
+              <a class="nav__link js-menu-close" href="#gallery-section">Travel With Us</a>
             </li>
-            <li class="nav__item">
-              <a class="nav__link" href="#review-section">Contact Us</a>
+            <li class="nav__item js-menu-close">
+              <a class="nav__link js-menu-close" href="#review-section">Contact Us</a>
+            </li>
+          </ul>
+
+          <ul class="social social--menu">
+            <li class="social__item">
+              <a class="social__link" href="#">
+                <svg class="social__icon">
+                  <use href="./images/icon-sprite.svg#icon-facebook"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="social__item">
+              <a class="social__link" href="#">
+                <svg class="social__icon">
+                  <use href="./images/icon-sprite.svg#icon-twitter"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="social__item">
+              <a class="social__link" href="#">
+                <svg class="social__icon">
+                  <use href="./images/icon-sprite.svg#icon-linkedin"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="social__item">
+              <a class="social__link" href="#">
+                <svg class="social__icon">
+                  <use href="./images/icon-sprite.svg#icon-youtube"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="social__item">
+              <a class="social__link" href="#">
+                <svg class="social__icon">
+                  <use href="./images/icon-sprite.svg#icon-pinterest"></use>
+                </svg>
+              </a>
             </li>
           </ul>
         </nav>
@@ -366,6 +404,9 @@
         },
       });
     </script>
+
+    <!-- Menu -->
+    <script src="./js/menu.js"></script>
 
     <!-- Modal -->
     <script src="./js/modal.js"></script>

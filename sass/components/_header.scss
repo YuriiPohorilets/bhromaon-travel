@@ -151,7 +151,7 @@
 
   background-color: getColor(accent);
 
-  transform: translateX(-100%);
+  transform: translateX(-120%);
   opacity: 0;
   visibility: hidden;
 
@@ -236,13 +236,21 @@
   &:hover,
   &:focus {
     color: getColor(active-hover);
-    text-shadow: getShadow(btn);
   }
 
   &:hover::after,
   &:focus::after {
     transform: translateX(0);
   }
+}
+
+nav ul li a.current {
+  color: getColor(active-hover);
+  text-shadow: getShadow(btn);
+}
+
+nav ul li a.current.nav__link::after {
+  transform: translateX(0);
 }
 
 .social.social--menu {
@@ -254,8 +262,10 @@
 // Hero
 .hero {
   height: 100vh;
-  padding-top: 264px;
-  padding-bottom: 215px;
+  // padding-top: 264px;
+  // padding-bottom: 215px;
+
+  padding: 10vh 0;
 
   background-image: url('../images/hero-bg.jpg');
   background-repeat: no-repeat;
@@ -263,6 +273,8 @@
 }
 
 .hero__container {
+  padding-top: 100px;
+
   text-align: center;
 }
 
@@ -332,10 +344,9 @@
 
 .search {
   position: relative;
-
-  margin-bottom: 100px;
   margin-left: auto;
   margin-right: auto;
+  margin-bottom: 120px;
 
   max-width: 653px;
 }

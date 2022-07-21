@@ -1,64 +1,75 @@
 // Maps
 $colors: (
-    'accent': #5474FD,
-    'primary': #E8E8E8,
-    'secondary': #ffffff,
-    'copy': #999999,
+  'accent': #5474fd,
+  'primary': #e8e8e8,
+  'secondary': #ffffff,
+  'copy': #999999,
 
-    'background': #333333,
-    'background-card': rgba(35, 35, 35, 0.900),
-    'background-footer': #232323,
+  'background': #333333,
+  'background-card': rgba(35, 35, 35, 0.9),
+  'background-footer': #232323,
 
-    'active-accent': #496BFE,
-    'active-white': #FFFFFF,
-    'active-black': #000000,
-    'active-hover': #d5d5d5,
+  'active-accent': #496bfe,
+  'active-white': #ffffff,
+  'active-black': #000000,
+  'active-hover': #d5d5d5,
+
+  'icon-b': #ff6363,
+  'icon-c': #00a2ff,
 );
 
 $shadows: (
-    'card': 0px 8px 30px rgba(212, 20, 67, 0.1),
-    'btn': (0px 3px 1px rgba(0, 0, 0, 0.1),
-        0px 1px 2px rgba(0, 0, 0, 0.08),
-        0px 2px 2px rgba(0, 0, 0, 0.12)),
+  'card': 0px 8px 30px rgba(212, 20, 67, 0.1),
+  'btn': (
+    0px 3px 1px rgba(0, 0, 0, 0.1),
+    0px 1px 2px rgba(0, 0, 0, 0.08),
+    0px 2px 2px rgba(0, 0, 0, 0.12),
+  ),
 );
 
 $properties: (
-    'cubic': cubic-bezier(0.215, 0.610, 0.355, 1),
-    'time': 350ms,
+  'cubic': cubic-bezier(0.215, 0.61, 0.355, 1),
+  'time': 350ms,
 );
 
 $fonts: (
-    'primary': ('Josefin Sans', sans-serif),
-    'secondary': ('Aleo', serif),
+  'primary': (
+    'Josefin Sans',
+    sans-serif,
+  ),
+  'secondary': (
+    'Aleo',
+    serif,
+  ),
 );
 
 $breakpoints: (
-    'mobile': 320px,
-    'tablet': 768px,
-    'desktop': 1280px,
+  'mobile': 320px,
+  'tablet': 768px,
+  'desktop': 1280px,
 );
 
 // Colors
 @function getColor($key) {
-    @return map-get($colors, $key);
+  @return map-get($colors, $key);
 }
 
 // Shadows
 @function getShadow($key) {
-    @return map-get($shadows, $key);
+  @return map-get($shadows, $key);
 }
 
 // Properties
 @function getProperty($key) {
-    @return map-get($properties, $key);
+  @return map-get($properties, $key);
 }
 
 // Fonts
 @function getFont($key) {
-    @return map-get($fonts, $key);
+  @return map-get($fonts, $key);
 }
 
 // Breakpoints
 @function getSize($key) {
-    @return map-get($breakpoints, $key);
+  @return map-get($breakpoints, $key);
 }

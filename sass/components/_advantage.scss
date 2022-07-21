@@ -1,51 +1,61 @@
 .advantage {
-    padding: 115px 0;
+  padding: 115px 0;
 
-    background-color: getColor(background);
+  background-color: getColor(background);
 }
 
 .advantage__list {
-    @extend %list;
+  @extend %list;
 
+  @include bpoint(tablet) {
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
+  }
 }
 
 .advantage__item {
-    position: relative;
-    margin-right: 158px;
+  position: relative;
 
-    font-family: getFont(secondary);
-    font-size: 36px;
-    line-height: 0.72;
-    text-align: center;
+  margin-bottom: 70px;
+
+  font-family: getFont(secondary);
+  font-size: 36px;
+  line-height: 1.22;
+  text-align: center;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  @include bpoint(tablet) {
+    margin-bottom: 0;
+
+    font-size: 32px;
 
     &:last-child {
-        margin-right: 0;
+      margin-right: 0;
     }
-
-    &:not(:last-child)::after {
-        content: '';
-        position: absolute;
-        top: 40%;
-        right: 0;
-
-        transform: translateX(100%);
-
-        display: block;
-        width: 158px;
-        height: 1px;
-
-        background-color: getColor(active-white);
-    }
+  }
 }
 
 .advantage__icon {
-    position: relative;
-    margin-bottom: 35px;
+  position: relative;
+  margin-bottom: 35px;
 
-    width: 100px;
-    height: 100px;
-    fill: currentColor;
+  width: 100px;
+  height: 100px;
+  fill: currentColor;
+
+  &--map {
+    fill: getColor(accent);
+  }
+
+  &--check {
+    fill: getColor(icon-b);
+  }
+
+  &--airplane {
+    fill: getColor(icon-c);
+  }
 }

@@ -1,70 +1,74 @@
 // Swiper
 .swiper {
-    width: 100%;
-    height: 100%;
+  width: 100%;
+  height: 100%;
 }
 
 .swiper-slide {
-    background: getColor(background-card);
+  background: getColor(background-card);
 
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .swiper-slide img {
-    display: block;
-    width: 445px;
-    height: 284px;
-    object-fit: cover;
+  display: block;
+  width: 445px;
+  height: 284px;
+  object-fit: cover;
 }
 
 .swiper-scrollbar-drag {
-    background-color: getColor(accent);
+  background-color: getColor(accent);
 }
 
 // End Swiper
 
 .review {
-    padding-top: 130px;
-    padding-bottom: 200px;
+  padding-top: 130px;
+  padding-bottom: 200px;
 
-
-    background-image: url('../images/review/review-bg.jpg');
-    background-repeat: no-repeat;
-    background-size: cover;
+  background-image: url('../images/review/review-bg.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .review__title {
-    margin-bottom: 90px;
+  margin-bottom: 90px;
 
-    text-align: center;
+  text-align: center;
 }
 
 .review__wrapper {
-    display: flex;
-    align-items: center;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+
+  @include bpoint(desktop) {
+    flex-direction: row;
+  }
 }
 
 .comment {
-    padding-top: 43px;
-    padding-bottom: 42px;
-    padding-left: 50px;
-    padding-right: 15px;
+  padding-top: 43px;
+  padding-bottom: 42px;
+  padding-left: 50px;
+  padding-right: 15px;
 
-    background-color: getColor(background);
+  background-color: getColor(background);
 }
 
 .comment__name {
-    margin-bottom: 9px;
+  margin-bottom: 9px;
 
-    font-size: 20px;
-    line-height: 1.3;
-    text-transform: uppercase;
+  font-size: 20px;
+  line-height: 1.3;
+  text-transform: uppercase;
 }
 
 .bracket {
-    width: 25px;
-    height: 25px;
-    fill: getColor(accent);
+  width: 25px;
+  height: 25px;
+  fill: getColor(accent);
 }
